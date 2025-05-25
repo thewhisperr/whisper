@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Prove that for any integer n, n² + n is always even.",
+    "options": [
+      "By induction: true for n=0, assume for n=k, then prove for n=k+1",
+      "Factor as n(n+1): product of consecutive integers is even",
+      "Consider cases: n even ⇒ n² even; n odd ⇒ n² odd",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "All methods are valid proofs. The simplest is factoring: n(n+1) must be even since one of two consecutive integers is always even."
+  },
+  {
+    "question": "Let G be a group under multiplication. If g² = e for all g ∈ G (where e is the identity), prove G is abelian.",
+    "options": [
+      "Show gh = hg using (gh)² = e",
+      "Construct a Cayley table",
+      "Use the Fundamental Theorem of Finite Abelian Groups",
+      "Assume non-abelian and find a contradiction"
+    ],
+    "correctAnswer": 0,
+    "explanation": "(gh)² = e ⇒ ghgh = e ⇒ gh = h⁻¹g⁻¹ = hg (since g² = e ⇒ g⁻¹ = g)."
+  },
+  {
+    "question": "What is the minimal polynomial of √2 + √3 over ℚ?",
+    "options": [
+      "x⁴ - 10x² + 1",
+      "x² - 5x + 6",
+      "x² - 2√6x + 5",
+      "x⁴ + 10x² + 1"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Let α = √2 + √3. Then α² = 5 + 2√6 ⇒ (α² - 5)² = 24 ⇒ α⁴ - 10α² + 1 = 0. This is irreducible over ℚ."
+  },
+  {
+    "question": "Classify the group (ℤ/12ℤ)× (units modulo 12) up to isomorphism.",
+    "options": [
+      "Cyclic group C₄",
+      "Klein four-group C₂ × C₂",
+      "Cyclic group C₆",
+      "Non-abelian group of order 4"
+    ],
+    "correctAnswer": 1,
+    "explanation": "(ℤ/12ℤ)× = {1,5,7,11} ≅ C₂ × C₂, since all elements have order 2."
+  },
+  {
+    "question": "Compute the Smith Normal Form of the matrix [[2, 4], [4, 8]] over ℤ.",
+    "options": [
+      "[[2, 0], [0, 0]]",
+      "[[1, 0], [0, 8]]",
+      "[[1, 0], [0, 4]]",
+      "[[2, 0], [0, 4]]"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Row/column operations give: [[2,4],[0,0]] → [[2,0],[0,0]] (gcd(2,4)=2, and 2 divides all other minors)."
+  }
+]
