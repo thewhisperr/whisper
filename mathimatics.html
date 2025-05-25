@@ -288,5 +288,62 @@
   </div>
 </section>
     </main>
+    <script>
+  async function loadQuiz(moduleName) {
+    try {
+      // Hide buttons, show quiz
+      document.querySelector('.other-items').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+      document.getElementById('module-name').textContent = moduleName;
+
+      // Load quiz data from JSON file
+      const response = await fetch(`${moduleName}.json`);
+      if (!response.ok) throw new Error("Failed to load quiz.");
+      const questions = await response.json();
+      renderQuestions(questions);
+    } catch (error) {
+      alert("Quiz failed to load. Check console for details.");
+      console.error(error);
+    }
+  }
+
+  function renderQuestions(questions) {
+    const container = document.getElementById('questions');
+    container.innerHTML = ''; // Clear previous questions
+
+    questions.forEach((q, index) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'qcm';
+      questionDiv.innerHTML = `
+        <p><strong>${index + 1}. ${q.question}</strong></p>
+        ${q.options.map((opt, i) => `
+          <input type="radio" name="q${index}" id="q${index}-${i}">
+          <label for="q${index}-${i}">${opt}</label><br>
+        `).join('')}
+        <button onclick="checkAnswer(${index}, ${q.correctAnswer})">Check Answer</button>
+        <p id="feedback-${index}" style="font-weight: bold;"></p>
+      `;
+      container.appendChild(questionDiv);
+    });
+  }
+
+  function checkAnswer(qIndex, correctIndex) {
+    const selected = document.querySelector(`input[name="q${qIndex}"]:checked`);
+    const feedback = document.getElementById(`feedback-${qIndex}`);
+    
+    if (selected && selected.id === `q${qIndex}-${correctIndex}`) {
+      feedback.textContent = "✅ Correct!";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "❌ Try again!";
+      feedback.style.color = "red";
+    }
+  }
+
+  function closeQuiz() {
+    document.getElementById('quiz-container').style.display = 'none';
+    document.querySelector('.other-items').style.display = 'flex';
+  }
+</script>
 </body>
 </html>
