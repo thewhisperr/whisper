@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHelp - Hello I'm Whisper!</title>
+    <style>
+        body {
+            background-color: rgb(255, 211, 236);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: beige;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #fdfdfd;
+            padding: 20px 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .header_line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: rgb(6, 4, 4);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            flex: 1;
+            padding: 80px 40px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product, .product2, .product3, .product4 {
+            color: rgb(16, 11, 11);
+            background-color: rgb(248, 248, 248);
+            border: 2px solid #ccc;
+            padding: 30px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product:hover, .product2:hover, .product3:hover, .product4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 30px 20px 20px;
+            font-size: 14px;
+            border-top: 1px solid #ccc;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #bbb;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header_line {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+            }
+           
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product, .product2, .product3, .product4 {
+                width: 80%;
+                max-width: 300px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+           
+
+            .profile-picture {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        a {
+            color : inherit;
+            text-decoration: none;
+        }
+        a :hover{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        <div class="header_line">
+           
+        </div>
+        
+        <div class="intro-section">
+           <div class="profile-picture"><img src="peng.jpg" alt="logo" class="logo"></div>
+            <h1><b>Hello I'm Whisper!</b></h1>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="product"><a href="mathimatics.html">do you need help in Mathematics ?</a></div>
+            <div class="product2"><a href="cs.html">or maybe Computer Science ?</a></div>
+            <div class="product3"><a href="sn.html">what about Systems and Networking ?</a></div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>📚 StudyHelp &copy; 2025 — Helping Students Learn and Grow</p>
+        <p>Contact: <a href="mailto:oumaimo284@gmail.com">oumaimo284@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/The_whisper_r" target="_blank">The_whisper_r</a></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="location.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
