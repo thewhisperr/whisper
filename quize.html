@@ -1,1 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Portal</title>
+    <style>
+        
+        body {
+            background-color: rgb(255, 211, 236);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: beige;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        header {
+            background-color: #fdfdfd;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .header_line {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 0;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .intro-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        h1 {
+            color: rgb(6, 4, 4);
+            margin: 10px 0;
+            font-size: 1.8em;
+        }
+
+        .modules-section, 
+        .prof-section, 
+        .other-section {
+            color: black;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            text-align: center;
+        }
+
+        .module-items, 
+        .prof-items, 
+        .other-items {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-direction: column;
+        }
+
+        .module-items div, 
+        .prof-items div, 
+        .other-items div {
+            background-color: #e0e0e0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95em;
+        }
+
+        .module-items div:hover, 
+        .prof-items div:hover, 
+        .other-items div:hover {
+            background-color: #d0d0d0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        /* Tablet and larger screens */
+        @media (min-width: 768px) {
+            main {
+                flex-direction: row;
+                padding: 20px;
+                gap: 20px;
+            }
+            
+            .modules-section,
+            .prof-section,
+            .other-section {
+                margin: 0;
+                padding: 25px;
+            }
+            
+            .intro-section {
+                flex-direction: row;
+                text-align: left;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+            
+            nav ul {
+                gap: 20px;
+            }
+            
+            nav a {
+                padding: 10px 15px;
+            }
+        }
+
+        /* Desktop screens */
+        @media (min-width: 1024px) {
+            header {
+                padding: 20px 40px;
+            }
+            
+            .modules-section,
+            .prof-section,
+            .other-section {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .module-items div, 
+            .prof-items div, 
+            .other-items div {
+                padding: 15px 25px;
+                font-size: 1em;
+            }
+        }
+/* Quiz styles */
+#quiz-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.qcm {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #ff69b4;
+}
+
+.qcm button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.qcm button:hover {
+  background-color: #ff1493;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="location.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav> 
+        <div class="header_line"></div>
+        
+        <div class="intro-section">
+            <div class="profile-picture">
+                <img src="peng.jpg" alt="Profile Picture">
+            </div>
+            <h1><b>Choose please!</b></h1>
+        </div>
+    </header>
+
+    <main>
+        
+   <section id="other" class="other-section">   
+  <h2><strong>Test Your Knowledge</strong></h2>
+  <div class="other-items">
+    <!-- Quiz module selector buttons -->
+    <div onclick="loadQuiz('algebra')">Algebra Quiz</div>
+    <div onclick="loadQuiz('analysis')">Analysis Quiz</div>
+    <div onclick="loadQuiz('logic')">Logic Quiz</div>
+    <div onclick="loadQuiz('algebra')">Algebra Quiz</div>
+    <div onclick="loadQuiz('analysis')">Analysis Quiz</div>
+    <div onclick="loadQuiz('logic')">Logic Quiz</div>
+    <div onclick="loadQuiz('algebra')">Algebra Quiz</div>
+    <div onclick="loadQuiz('analysis')">Analysis Quiz</div>
+    <div onclick="loadQuiz('logic')">Logic Quiz</div>
+  </div>
+  <!-- Quiz container (hidden by default) -->
+  <div id="quiz-container" style="display: none; margin-top: 20px;">
+    <h3 id="quiz-title">Quiz: <span id="module-name"></span></h3>
+    <div id="questions"></div>
+    <button onclick="closeQuiz()" style="margin-top: 10px;">Back to Menu</button>
+  </div>
+</section>
+    </main>
+   <script>
+  async function loadQuiz(moduleName) {
+    try {
+      // Hide buttons, show quiz
+      document.querySelector('.other-items').style.display = 'none';
+      document.getElementById('quiz-container').style.display = 'block';
+      document.getElementById('module-name').textContent = moduleName;
+
+      // Load quiz data from JSON file
+      const response = await fetch(`${moduleName}.json`);
+      if (!response.ok) throw new Error("Failed to load quiz.");
+      const questions = await response.json();
+      renderQuestions(questions);
+    } catch (error) {
+      alert("Quiz failed to load. Check console for details.");
+      console.error(error);
+    }
+  }
+
+  function renderQuestions(questions) {
+    const container = document.getElementById('questions');
+    container.innerHTML = ''; // Clear previous questions
+
+    questions.forEach((q, index) => {
+      const questionDiv = document.createElement('div');
+      questionDiv.className = 'qcm';
+      questionDiv.innerHTML = `
+        <p><strong>${index + 1}. ${q.question}</strong></p>
+        ${q.options.map((opt, i) => `
+          <input type="radio" name="q${index}" id="q${index}-${i}">
+          <label for="q${index}-${i}">${opt}</label><br>
+        `).join('')}
+        <button onclick="checkAnswer(${index}, ${q.correctAnswer})">Check Answer</button>
+        <p id="feedback-${index}" style="font-weight: bold;"></p>
+      `;
+      container.appendChild(questionDiv);
+    });
+  }
+
+  function checkAnswer(qIndex, correctIndex) {
+    const selected = document.querySelector(`input[name="q${qIndex}"]:checked`);
+    const feedback = document.getElementById(`feedback-${qIndex}`);
+    
+    if (selected && selected.id === `q${qIndex}-${correctIndex}`) {
+      feedback.textContent = "✅ Correct!";
+      feedback.style.color = "green";
+    } else {
+      feedback.textContent = "❌ Try again!";
+      feedback.style.color = "red";
+    }
+  }
+
+  function closeQuiz() {
+    document.getElementById('quiz-container').style.display = 'none';
+    document.querySelector('.other-items').style.display = 'flex';
+  }
+</script>
+    <script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="JxuxCmRUOi5fAMnfIYJ4C";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+</body>
+</html>
 
