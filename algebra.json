@@ -43,15 +43,116 @@
     "correctAnswer": 1,
     "explanation": "(ℤ/12ℤ)× = {1,5,7,11} ≅ C₂ × C₂, since all elements have order 2."
   },
+ 
   {
-    "question": "Compute the Smith Normal Form of the matrix [[2, 4], [4, 8]] over ℤ.",
+    "question": "Which of the following is a correct definition of a set?",
     "options": [
-      "[[2, 0], [0, 0]]",
-      "[[1, 0], [0, 8]]",
-      "[[1, 0], [0, 4]]",
-      "[[2, 0], [0, 4]]"
+      "A collection of objects called elements or members",
+      "A list of numbers in increasing order",
+      "A group of functions with the same domain",
+      "A subset of the real numbers"
     ],
     "correctAnswer": 0,
-    "explanation": "Row/column operations give: [[2,4],[0,0]] → [[2,0],[0,0]] (gcd(2,4)=2, and 2 divides all other minors)."
+    "explanation": "A set is defined as a collection of objects called elements or members of the set, as stated in the basic concepts of sets."
+  },
+  {
+    "question": "What is the cardinality of the power set of a set with 3 elements?",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "3"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The power set of a set with n elements has 2^n elements. For n=3, the cardinality is 2^3 = 8."
+  },
+  {
+    "question": "Which property must an equivalence relation satisfy?",
+    "options": [
+      "Reflexivity, symmetry, and transitivity",
+      "Only reflexivity and symmetry",
+      "Only symmetry and transitivity",
+      "Only reflexivity and transitivity"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An equivalence relation must be reflexive, symmetric, and transitive, as defined in the section on equivalence relations."
+  },
+  {
+    "question": "What is the contrapositive of the statement 'If it rains, then the ground is wet'?",
+    "options": [
+      "If the ground is not wet, then it did not rain.",
+      "If it does not rain, then the ground is not wet.",
+      "The ground is wet if and only if it rains.",
+      "If the ground is wet, then it rained."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The contrapositive of 'If P, then Q' is 'If not Q, then not P', as explained in the section on logical implications."
+  },
+  {
+    "question": "Which of the following functions is bijective?",
+    "options": [
+      "f: ℝ → ℝ, f(x) = x²",
+      "f: ℝ → ℝ, f(x) = x³",
+      "f: ℤ → ℤ, f(n) = 2n",
+      "f: ℝ → ℝ, f(x) = sin(x)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A function is bijective if it is both injective and surjective. f(x) = x³ is bijective on ℝ, as it is both one-to-one and onto."
+  },
+  {
+    "question": "What is the negation of the statement '∀x ∈ ℝ, x² ≥ 0'?",
+    "options": [
+      "∃x ∈ ℝ, x² < 0",
+      "∀x ∈ ℝ, x² < 0",
+      "∃x ∈ ℝ, x² ≥ 0",
+      "∀x ∈ ℝ, x² ≤ 0"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The negation of '∀x ∈ D, P(x)' is '∃x ∈ D, ¬P(x)', as explained in the section on quantifiers."
+  },
+  {
+    "question": "Which of the following is a partition of the set E = {1, 2, 3, 4}?",
+    "options": [
+      "{{1}, {2, 3}, {4}}",
+      "{{1, 2}, {2, 3}, {4}}",
+      "{{1}, {2}, {3}, {4}, ∅}",
+      "{{1, 2, 3, 4}}"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A partition of a set is a collection of disjoint subsets whose union is the original set. {{1}, {2, 3}, {4}} satisfies this condition."
+  },
+  {
+    "question": "What is the composition of functions f and g, denoted f ∘ g?",
+    "options": [
+      "The function defined by (f ∘ g)(x) = f(g(x))",
+      "The function defined by (f ∘ g)(x) = g(f(x))",
+      "The union of the domains of f and g",
+      "The intersection of the ranges of f and g"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The composition f ∘ g is defined by (f ∘ g)(x) = f(g(x)), as explained in the section on composition of functions."
+  },
+  {
+    "question": "Which of the following relations is a total order on the set of real numbers?",
+    "options": [
+      "The divisibility relation",
+      "The equality relation",
+      "The usual less-than-or-equal relation (≤)",
+      "The subset relation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The usual ≤ relation on ℝ is a total order because it is reflexive, antisymmetric, transitive, and any two elements are comparable."
+  },
+  {
+    "question": "What is the purpose of a proof by contradiction?",
+    "options": [
+      "To assume the negation of the statement and derive a contradiction",
+      "To prove the statement directly from axioms",
+      "To use examples to validate the statement",
+      "To break the statement into cases"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In proof by contradiction, we assume the negation of the statement to be proved and derive a contradiction, showing the original statement must be true."
   }
+
 ]
