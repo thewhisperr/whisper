@@ -39,38 +39,22 @@
             margin-bottom: 15px;
         }
 
-        nav a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+       nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
 
-        nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: left 0.3s ease;
-            z-index: -1;
-        }
-
-        nav a:hover::before {
-            left: 0;
-        }
-
-        nav a:hover {
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+nav a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
 
         .page-title {
             text-align: center;
@@ -363,7 +347,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
                     <h4 class="feature-title">Cybersecurity Focus</h4>
-                    <p>Specialized content for cybersecurity students and professionals</p>
+                    <p>Specialized content for Math/info students </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⏰</div>
