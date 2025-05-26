@@ -1,0 +1,112 @@
+[
+  {
+    "question": "Which statement best characterizes the epsilon-delta definition of a limit?",
+    "options": [
+      "For every ε > 0, there exists δ > 0 such that if 0 < |x - a| < δ, then |f(x) - L| < ε",
+      "For some ε > 0, there exists δ > 0 such that if |x - a| < δ, then |f(x) - L| < ε",
+      "For every δ > 0, there exists ε > 0 such that if 0 < |x - a| < δ, then |f(x) - L| < ε",
+      "The function approaches L as x gets arbitrarily close to a"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The precise epsilon-delta definition requires that for ANY given tolerance ε > 0, we can find a corresponding δ > 0 such that inputs within δ of a (excluding a itself) produce outputs within ε of L."
+  },
+  {
+    "question": "What is the fundamental difference between pointwise and uniform continuity?",
+    "options": [
+      "Pointwise continuity applies to individual points, uniform continuity applies to intervals",
+      "In uniform continuity, δ depends only on ε, while in pointwise continuity, δ depends on both ε and the point",
+      "Uniform continuity is stronger and implies pointwise continuity, but not vice versa",
+      "Both B and C are correct"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Uniform continuity means δ can be chosen to work for all points simultaneously (depends only on ε), while pointwise continuity allows δ to vary with each point. Uniform continuity is indeed stronger and implies pointwise continuity."
+  },
+  {
+    "question": "Which theorem guarantees that a continuous function on a closed and bounded interval attains its maximum and minimum values?",
+    "options": [
+      "Intermediate Value Theorem",
+      "Mean Value Theorem", 
+      "Extreme Value Theorem",
+      "Bolzano-Weierstrass Theorem"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The Extreme Value Theorem states that a continuous function on a compact set (closed and bounded in ℝ) attains its maximum and minimum values. This is a fundamental result in real analysis."
+  },
+  {
+    "question": "What does it mean for a function to be differentiable at a point a?",
+    "options": [
+      "The function is continuous at a",
+      "The limit lim(h→0) [f(a+h) - f(a)]/h exists",
+      "The function has a tangent line at the point (a, f(a))",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Differentiability at a point means the derivative limit exists, which automatically implies continuity at that point and the existence of a unique tangent line. All three conditions are equivalent characterizations."
+  },
+  {
+    "question": "Which sequence convergence test is most appropriate for the series Σ(n=1 to ∞) n²/3ⁿ?",
+    "options": [
+      "Comparison Test",
+      "Ratio Test",
+      "Root Test", 
+      "Integral Test"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Ratio Test is ideal for series with factorial-like or exponential terms. For n²/3ⁿ, the ratio |aₙ₊₁/aₙ| = (n+1)²/n² · 1/3 → 1/3 < 1, confirming convergence."
+  },
+  {
+    "question": "What is the relationship between the derivative and continuity of a function?",
+    "options": [
+      "If f is differentiable at a, then f is continuous at a",
+      "If f is continuous at a, then f is differentiable at a",
+      "Differentiability and continuity are equivalent",
+      "There is no general relationship between them"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Differentiability implies continuity, but continuity does not imply differentiability. Classic counterexample: f(x) = |x| is continuous at x = 0 but not differentiable there."
+  },
+  {
+    "question": "Which property distinguishes the real numbers from the rational numbers in terms of completeness?",
+    "options": [
+      "Every bounded sequence has a convergent subsequence",
+      "Every Cauchy sequence converges",
+      "Every bounded monotonic sequence converges",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The completeness of ℝ can be expressed through equivalent formulations: Bolzano-Weierstrass theorem, Cauchy completeness, and monotonic sequence convergence. These all distinguish ℝ from ℚ where such properties fail."
+  },
+  {
+    "question": "What does the Mean Value Theorem guarantee for a function continuous on [a,b] and differentiable on (a,b)?",
+    "options": [
+      "There exists c ∈ (a,b) such that f'(c) = 0",
+      "There exists c ∈ (a,b) such that f'(c) = [f(b) - f(a)]/(b - a)",
+      "The function attains its average value at some point",
+      "The function is uniformly continuous on [a,b]"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The MVT states there exists a point c where the instantaneous rate of change (derivative) equals the average rate of change over the interval. This is fundamental for connecting local and global behavior."
+  },
+  {
+    "question": "Which statement about the Riemann integral is most accurate?",
+    "options": [
+      "A function is Riemann integrable if and only if it is continuous",
+      "A function is Riemann integrable if and only if the set of its discontinuities has measure zero",
+      "Every bounded function on a closed interval is Riemann integrable",
+      "The Riemann integral always equals the area under the curve"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Riemann's integrability theorem: a bounded function on [a,b] is Riemann integrable if and only if the set of its discontinuities has Lebesgue measure zero. This includes continuous functions but also some discontinuous ones."
+  },
+  {
+    "question": "What is the primary purpose of the Intermediate Value Theorem?",
+    "options": [
+      "To prove that continuous functions are differentiable",
+      "To guarantee that continuous functions on closed intervals take on all intermediate values",
+      "To establish the existence of roots for polynomial equations",
+      "To prove the fundamental theorem of calculus"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The IVT states that if f is continuous on [a,b] and k is between f(a) and f(b), then there exists c ∈ [a,b] such that f(c) = k. This guarantees continuous functions assume all intermediate values."
+  }
+]
